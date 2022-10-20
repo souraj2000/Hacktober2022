@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int maxCount(int m, int n, vector<vector<int>>& v) {
+        int i,j;
+        int minr=m,minc=n;
+        for(i=0;i<v.size();i++)
+        {
+            if(v[i][0]<minr)
+            {
+                minr=v[i][0];
+            }
+            if(v[i][1]<minc)
+            {
+                minc=v[i][1];
+            }
+        }
+        return minr*minc;
+    }
+};
